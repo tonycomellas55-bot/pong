@@ -1,0 +1,9 @@
+.DS_Store
+
+# deps
+node_modules/
+
+# build outputs
+src/*.js
+src/*.js.map
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pong</title>
+    <meta name="description" content="A clean little Pong with vibe." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="frame">
+      <header class="topbar" aria-label="Controls">
+        <div class="brand">
+          <span class="dot"></span>
+          <span class="name">PONG</span>
+          <span class="tag">vibe build</span>
+        </div>
+        <div class="hints">
+          <span class="hint"><kbd>W</kbd><kbd>S</kbd> or <kbd>↑</kbd><kbd>↓</kbd></span>
+          <span class="hint"><kbd>Space</kbd> pause</span>
+          <span class="hint"><kbd>R</kbd> reset</span>
+        </div>
+      </header>
+
+      <section class="stage" aria-label="Game">
+        <canvas id="game" width="960" height="540" aria-label="Pong canvas"></canvas>
+
+        <div class="hud" aria-hidden="true">
+          <div class="score">
+            <span id="scoreLeft" class="scoreNum">0</span>
+            <span class="scoreSep">:</span>
+            <span id="scoreRight" class="scoreNum">0</span>
+          </div>
+          <div id="subline" class="subline">Press Enter to serve</div>
+        </div>
+
+        <div id="overlay" class="overlay" role="dialog" aria-modal="true">
+          <div class="card">
+            <div class="title">Pong, but crisp.</div>
+            <div class="copy">
+              First to <strong>11</strong> wins. Add spin by moving the paddle at impact.
+            </div>
+            <div class="grid">
+              <button id="btnStart" class="btn primary" type="button">Start</button>
+              <button id="btnDifficulty" class="btn" type="button" aria-label="Toggle difficulty">
+                Difficulty: <span id="difficultyLabel">Normal</span>
+              </button>
+              <button id="btnSound" class="btn" type="button" aria-label="Toggle sound">
+                Sound: <span id="soundLabel">On</span>
+              </button>
+            </div>
+            <div class="fine">
+              Tip: on mobile, drag on the left half to move your paddle.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bottombar">
+        <div class="status">
+          <span class="pill" id="pillMode">Attract</span>
+          <span class="pill" id="pillDiff">Normal</span>
+        </div>
+        <div class="credits">
+          <span>Canvas</span>
+          <span class="sep">·</span>
+          <span>Spin</span>
+          <span class="sep">·</span>
+          <span>AI</span>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
