@@ -3,7 +3,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["node_modules/**", "src/*.js", "src/*.js.map"],
+    ignores: ["node_modules/**", "src/*.js", "src/*.js.map", "public/assets/**"],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -20,4 +20,3 @@ export default tseslint.config(
     },
   },
 );
-
