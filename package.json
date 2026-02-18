@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outfile=./public/assets/main.js --sourcemap=linked --watch",
+    "dev": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outdir=./public/assets --entry-naming=main.js --sourcemap=linked --watch",
     "serve": "python3 -m http.server 5173 --directory public",
-    "build": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outfile=./public/assets/main.js --sourcemap=linked",
-    "build:prod": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outfile=./public/assets/main.js --sourcemap=linked --production",
+    "build": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outdir=./public/assets --entry-naming=main.js --sourcemap=linked",
+    "build:prod": "mkdir -p public/assets && bun build ./src/main.ts --target=browser --format=esm --outdir=./public/assets --entry-naming=main.js --sourcemap=linked --production",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "bun test",
